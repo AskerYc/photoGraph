@@ -11,6 +11,10 @@ def index():
         # return render_template("index.html")
         # return send_from_directory(root, "index.html")
         return send_file("./index.html")
+
+@app.route('/css/style.css')
+def index1():
+        return send_file("./css/style.css")
         
 if __name__ == '__main__':
-        app.run(host='0.0.0.0', port=8080)
+        app.run(host='0.0.0.0', port=8081)
