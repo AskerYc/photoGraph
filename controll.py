@@ -6,7 +6,7 @@ from flask import send_from_directory
 app = Flask(__name__)
 root = os.path.join(os.path.dirname(os.path.abspath(__file__)))
 
-@app.route('/jinrong')
+@app.route('/xiaotian')
 def index():
         # return render_template("index.html")
         # return send_from_directory(root, "index.html")
@@ -63,6 +63,10 @@ def index12():
 @app.route('/img/6.png')
 def index13():
         return send_file("./img/6.png")
+
+@app.route('/audio/music.mp3')
+def index14():
+        return send_file("./audio/music.mp3")
         
 if __name__ == '__main__':
         app.run(host='0.0.0.0', port=8088)
